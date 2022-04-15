@@ -1,0 +1,425 @@
+.search {
+  .snowflake {
+    width: 37px;
+    height: 37px;
+    background: no-repeat center center;
+    background-size: cover;
+    cursor: pointer;
+  }
+  .snow-off {
+    background-image: url(../assets/svg/snow-off.svg);
+  }
+  .snow-on {
+    background-image: url(../assets/svg/snow-on.svg);
+  }
+}
+
+h3 {
+  text-transform: uppercase;
+  color: $color-text;
+  font-size: 26px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.favorites-menu {
+  margin-left: 50px;
+  margin-top: 20px;
+  width: 450px;
+  .choose-tree {
+    .cards-tree {
+      .card-tree {
+        width: 134px;
+        height: 134px;
+        margin: 5px;
+        cursor: pointer;
+        &__img {
+          padding-left: 20px;
+          padding-top: 5px;
+          img {
+            width: 80%;
+            height: 80%;
+          }
+        }
+      }
+    }
+  }
+  .choose-bg {
+    .cards-bg {
+      .card-bg {
+        width: 68px;
+        height: 68px;
+        margin: 5px;
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  .choose-light {
+    button {
+      width: 25px;
+      height: 25px;
+      border-radius: 15px;
+      border: 2px solid #000000;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+    .yellow {
+      background-color: #fdd700;
+    }
+    .red {
+      background-color: #fd0000;
+    }
+    .blue {
+      background-color: #2299eb;
+    }
+    .green {
+      background-color: #08aa05;
+    }
+    .multicolor {
+      background: linear-gradient(
+        124deg,
+        #ff2400,
+        #e81d1d,
+        #e8b71d,
+        #e3e81d,
+        #1de840,
+        #1ddde8,
+        #2b1de8
+      );
+    }
+  }
+  .reset-setting {
+    margin-top: 40px;
+    width: 300px;
+    height: 42px;
+    background-color: $background;
+    border: 1px solid $border;
+    border-radius: 30px;
+    color: $color-text;
+    text-align: center;
+    font-family: "Neucha", cursive;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out;
+    &:hover {
+      background-color: $hover-background;
+      border: 1px solid $hover-border;
+    }
+  }
+}
+
+@keyframes animateOne {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 100px 850px;
+  }
+}
+
+@keyframes animateTwo {
+  0% {
+    background-position: 0px -150px;
+  }
+  100% {
+    background-position: 0px 850px;
+  }
+}
+
+@keyframes animateThree {
+  0% {
+    background-position: 0px 100px;
+  }
+  100% {
+    background-position: 300px 850px;
+  }
+}
+
+.toysOnTree{
+  width: 70px;
+  height: 70px;
+}
+
+.main-tree-container {
+  position: relative;
+  width: 1000px;
+  height: 850px;
+  background: no-repeat center center;
+  background-size: cover;
+  .spruce {
+    position: relative;
+    display: block;
+    width: 500px;
+    height: 714px;
+    margin-left: 20%;
+    margin-top: 10%;
+    z-index: 3;
+  }
+  .snow {
+    position: relative;
+    display: none;
+    &-little {
+      background: url(../assets/snow.png) repeat;
+      background-size: 10%;
+      width: 100%;
+      height: 650px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: animateOne 10s infinite linear;
+    }
+    &-average {
+      background: url(../assets/snow.png) repeat;
+      background-size: 35%;
+      width: 100%;
+      height: 650px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: animateTwo 10s infinite linear;
+    }
+    &-big {
+      background: url(../assets/snow.png) repeat;
+      background-size: 50%;
+      width: 100%;
+      height: 650px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: animateThree 10s infinite linear;
+    }
+  }
+
+  .hang-toy{
+    position: absolute;
+    z-index: 20;
+    &:nth-of-type(1){
+      width: 75px;
+      height: 80px;
+      top:100px;
+      left: 420px
+    }
+    &:nth-of-type(2){
+      width: 140px;
+      height: 60px;
+      top:180px;
+      left:382px;
+    }
+    &:nth-of-type(3){
+      width: 195px;
+      height: 50px;
+      top: 240px;
+      left: 350px;
+    }
+    &:nth-of-type(4){
+      width: 260px;
+      height: 90px; 
+      top: 290px;
+      left: 320px;
+    }
+    &:nth-of-type(5){
+      width: 330px;
+      height: 140px;
+      top: 380px;
+      left: 280px;
+    }
+    &:nth-of-type(6){
+      width: 400px;
+      height: 80px;
+      top: 520px;
+      left: 250px;
+    }
+    &:nth-of-type(7){
+      width: 455px;
+      height: 140px;
+      top: 600px;
+      left: 220px;
+    }
+    &:nth-of-type(8){
+      width: 340px;
+      height: 38px;
+      top: 740px;
+      left:270px;
+    }
+    &:nth-of-type(9){
+      width: 190px;
+      height: 20px;
+      top: 778px;
+      left: 360px;
+    }
+  }
+  .garland {
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    width: 500px;
+    height: 714px;
+    top: 40px;
+    left: 60%;
+    z-index: 4;    
+    margin-left: -400px;
+    pointer-events: none;
+    &__branch {
+      position: absolute;
+      white-space: nowrap;
+      list-style: none;
+      border-radius: 50%;
+      &-light {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: -10px;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        &:nth-child(3n + 1) {
+          animation-duration: 1.2s;
+        }
+        &:nth-child(2n + 1) {
+          animation-duration: 1.5s;
+        }
+      }
+      .multicolor {
+        &:nth-child(1n + 1) {
+          animation-name: yellowLight;
+        }
+        &:nth-child(2n + 2) {
+          animation-name: redLight;
+        }
+        &:nth-child(3n + 3) {
+          animation-name: blueLight;
+        }
+        &:nth-child(4n + 4) {
+          animation-name: greenLight;
+        }
+      }
+    }
+  }
+}
+
+@keyframes redLight {
+  0% {
+    background: rgba(247, 0, 118, 1);
+    box-shadow: 0px 2px 12px 2px rgb(247, 0, 118);
+  }
+  50% {
+    background: rgba(247, 0, 118, 0.4);
+    box-shadow: 0px 2px 12px 2px rgb(247, 0, 118 / 20%);
+  }
+  100% {
+    background: rgba(247, 0, 118, 1);
+    box-shadow: 0px 2px 12px 2px rgb(247, 0, 118);
+  }
+}
+
+@keyframes yellowLight {
+  0% {
+    background: rgba(247, 231, 0, 1);
+    box-shadow: 0px 2px 12px 2px rgb(247, 231, 0);
+  }
+  50% {
+    background: rgba(247, 231, 0, 0.4);
+    box-shadow: 0px 2px 12px 2px rgb(247, 231, 0 / 20%);
+  }
+  100% {
+    background: rgba(247, 231, 0, 1);
+    box-shadow: 0px 2px 12px 2px rgb(247, 231, 0);
+  }
+}
+
+@keyframes blueLight {
+  0% {
+    background: rgb(0, 128, 247);
+    box-shadow: 0px 2px 12px 2px rgb(0, 128, 247);
+  }
+  50% {
+    background: rgba(0, 128, 247, 0.4);
+    box-shadow: 0px 2px 12px 2px rgb(0, 128, 247 / 20%);
+  }
+  100% {
+    background: rgba(0, 128, 247, 1);
+    box-shadow: 0px 2px 12px 2px rgb(0, 128, 247);
+  }
+}
+
+@keyframes greenLight {
+  0% {
+    background: rgba(29, 247, 0, 1);
+    box-shadow: 0px 2px 12px 2px rgb(29, 247, 0);
+  }
+  50% {
+    background: rgba(29, 247, 0, 0.4);
+    box-shadow: 0px 2px 12px 2px rgb(29, 247, 0 / 20%);
+  }
+  100% {
+    background: rgba(29, 247, 0, 1);
+    box-shadow: 0px 2px 12px 2px rgb(29, 247, 0);
+  }
+}
+
+.favorites-aside {
+  margin: 0 auto;
+  width: 360px;
+  .choose-toys {
+    .cards-toys {
+      .card-toy {
+        width: 80px;
+        height: 80px;
+        margin: 5px;
+        cursor: pointer;
+        &__count {
+          width: 22px;
+          height: 22px;
+          border-radius: 11px;
+          background-color: #0db977;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          p {
+            padding-top: 1px;
+            text-align: center;
+          }
+        }
+        img {
+          padding-top: 5px;
+          width: 80%;
+          height: 80%;
+        }
+      }
+    }
+  }
+}
+
+.card {
+  border-radius: 10px;
+  background: radial-gradient(
+    109.56% 109.56% at 0% -2.94%,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(179, 246, 255, 0.5) 100%
+  );
+  backdrop-filter: blur(4px);
+  transition: all 0.7s ease-in-out;
+  &:hover {
+    background: radial-gradient(
+      109.56% 109.56% at 0% -2.94%,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(53, 231, 255, 0.5) 100%
+    );
+  }
+}
+
+.no-active {
+  filter: grayscale(1);
+  cursor: auto !important;
+}

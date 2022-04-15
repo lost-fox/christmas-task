@@ -1,0 +1,377 @@
+.header-toys {
+   height: 100px;
+   justify-content: space-around;
+   color: $color-text;
+   align-items: center;
+ }
+ 
+ .tabs {
+   width: 400px;
+   justify-content: space-between;
+   align-items: center;
+   font-size: 30px;
+   text-transform: uppercase;
+   cursor: pointer;
+   &-main {
+     svg * {
+       transition: all 0.8s ease-in-out;
+       &:hover {
+         fill: $hover-background;
+       }
+     }
+   }
+   &-toy,
+   &-tree {
+     transition: all 0.8s ease-in-out;
+   }
+   &-toy:hover,
+   &-tree:hover {
+     color: $hover-background;
+   }
+ 
+   .line {
+     border-bottom: 5px solid $hover-background;
+     border-radius: 10%;
+     transition: all 0.7s ease-in-out;
+     &:hover {
+       border-bottom: 5px solid $border;
+     }
+   }
+ }
+ 
+ .search {
+   width: 400px;
+   justify-content: space-around;
+   align-items: center;
+
+   .audio-on{
+    width: 37px;
+    height: 37px;
+    background: url(../assets/svg/audio.svg) no-repeat center center;
+    background-size: cover;
+  }
+
+  .audio-off{
+    width: 37px;
+    height: 37px;
+    background: url(../assets/svg/mute.svg) no-repeat center center;
+    background-size: cover;
+  }
+ 
+   &__drop {
+     opacity: 0;
+     position: absolute;
+     float: right;
+     margin-left: 100px;
+     font-size: 14px;
+     color: $color-text;
+   }
+ 
+   input[type="search"] {
+     padding: 0px 20px;
+     width: 254px;
+     height: 36px;
+     background-color: $background;
+     border: 1px solid $border;
+     border-radius: 30px;
+   }
+ 
+   input:focus {
+     .search__drop {
+       opacity: 1;
+     }
+   }
+ 
+   ::-webkit-input-placeholder {
+     font-family: "Neucha", Times, serif;
+     font-size: 20px;
+     letter-spacing: 1.5px;
+     color: $color-text;
+   }
+ 
+   .count-toy {
+     width: 35px;
+     height: 35px;
+     border: 1px solid $color-text;
+     border-radius: 30px;
+     background-color: $background;
+     p {
+       margin-top: 8px;
+       text-align: center;
+     }
+   }
+ }
+ 
+ .main {
+   margin: 20px 40px;
+   filter: blur(0.4);
+ }
+
+ @keyframes Appearance {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+ 
+ .choose {
+   justify-content: space-between;
+   color: $color-text;
+   width: 100%;
+   .choose-block, .sort-block {
+     padding: 20px;
+     //width: 510px;
+     width: calc(380px + (510 - 380) * ((100vw - 1350px) / (1920 - 1350)));;
+     height: 260px;
+     background-color: #275a56;
+     border: none;
+     border-radius: 30px;
+     .active{
+      transform: scale(1.3);
+    }
+     h4 {
+       text-transform: uppercase;
+       text-align: center;
+     }
+     p {
+       font-size: 24px;
+     }
+     .shape-toys {
+       margin-top: 20px;
+       align-items: center;
+       button {
+         width: 42px;
+         height: 42px;
+         cursor: pointer;
+         margin-left: 20px;
+         transition: all 0.7s ease-in-out;
+         &:hover {
+           transform: scale(1.2);
+         }
+       }
+       .ball {
+         background: url(../assets/svg/ball.svg) no-repeat center center;
+         background-size: cover;
+       }
+       .bell {
+         background: url(../assets/svg/bell.svg) no-repeat center center;
+         background-size: cover;
+       }
+       .cone {
+         background: url(../assets/svg/cone.svg) no-repeat center center;
+         background-size: cover;
+       }
+       .snow {
+         background: url(../assets/svg/snow.svg) no-repeat center center;
+         background-size: cover;
+       }
+       .toy {
+         background: url(../assets/svg/toy.svg) no-repeat center center;
+         background-size: cover;
+       }
+     }
+     .color-toys {
+       margin-top: 20px;
+       align-items: center;
+       button {
+         width: 25px;
+         height: 24px;
+         border-radius: 5px;
+         cursor: pointer;
+         margin-left: 20px;
+         transition: all 0.7s ease-in-out;
+         &:hover {
+           transform: scale(1.2);
+         }
+       }
+       .white {
+         background-color: #ffffff;
+       }
+       .yellow {
+         background-color: #fdd700;
+       }
+       .red {
+         background-color: #fd0000;
+       }
+       .blue {
+         background-color: #2299eb;
+       }
+       .green {
+         background-color: #08aa05;
+       }
+     }
+     .size-toys {
+       margin-top: 20px;
+       align-items: center;
+       button {
+         background: url(../assets/svg/ball.svg) no-repeat center center;
+         background-size: cover;
+         cursor: pointer;
+         margin-left: 20px;
+         transition: all 0.7s ease-in-out;
+         &:hover {
+           transform: scale(1.2);
+         }
+       }
+       .big {
+         width: 52px;
+         height: 52px;
+       }
+       .average {
+         width: 42px;
+         height: 42px;
+       }
+       .small {
+         width: 30px;
+         height: 30px;
+       }
+     }
+     .favorite-toys {
+       margin-top: 20px;
+       align-items: center;
+       #favorite-toy {
+         cursor: pointer;
+         margin-left: 30px;
+       }
+     }
+ 
+     .range {
+       margin-top: 30px;
+       &__count,
+       &__year {
+         margin-top: 15px;
+         p {
+           margin: 0px 30px;
+         }
+         input[type="number"] {
+           width: 50px;
+           height: 35px;
+           background-color: $background;
+           border: 1px solid $hover-border;
+           border-radius: 30px;
+           padding-left: 45px;
+           color: $color-text;
+           font-family: "Neucha", cursive;
+           font-size: 20px;          
+           cursor: pointer;
+         }
+       }
+     }
+ 
+     #sort{
+       margin-top: 30px;
+       width: 380px;
+       height: 42px;
+       background-color: $background;
+       border: 1px solid $border;
+       border-radius: 30px;
+       text-align: center;
+       font-family: "Neucha", cursive;
+       font-size: 20px;
+       color: $color-text;
+       cursor: pointer;
+     }
+ 
+     .reset-filter{
+       margin-top: 80px;
+       width: 300px;
+       height: 42px;
+       background-color: $background;
+       border: 1px solid $border;
+       border-radius: 30px;
+       color: $color-text;
+       text-align: center;
+       font-family: "Neucha", cursive;
+       font-size: 20px;
+       cursor: pointer;
+       transition: all 0.8s ease-in-out;
+       &:hover{
+         background-color: $hover-background;
+         border: 1px solid $hover-border;
+       }
+     }
+     .reset-setting{
+      margin-top: 10px;
+      width: 300px;
+      height: 42px;
+      background-color: $background;
+      border: 1px solid $border;
+      border-radius: 30px;
+      color: $color-text;
+      text-align: center;
+      font-family: "Neucha", cursive;
+      font-size: 20px;
+      cursor: pointer;
+      transition: all 0.8s ease-in-out;
+      &:hover{
+        background-color: $hover-background;
+        border: 1px solid $hover-border;
+      }
+     }
+   }
+ }
+ 
+ .catalog-toys{
+   margin: 40px 50px 30px;
+   justify-content: space-between;
+   gap: 30px;
+   .no-toy{
+      margin-top: 40px;
+      color:$color-text;
+      font-size: 60px;
+      margin: 0 auto;
+   }
+   .chosen{
+    box-shadow: 1px 3px 10px 10px rgba(125, 150, 14, 0.863);
+   }
+   .card{
+     width: 222px;
+     height: 352px;
+     padding: 15px;
+     border-radius: 30px;
+     background-color: $hover-background;
+     h2{
+       color: $color-text;
+       text-align: center;
+       height: 58px;       
+     }
+     &__image{
+       display: block;
+       width: 110px;
+       height: 106px;
+       margin: 10px auto;
+     }
+     p{
+       color:$color-text;
+       font-size: 20px;
+       margin-bottom: 5px;
+     }
+     &__favorite{
+       width: 24px;
+       height: 24px;
+       margin-right: 15px;
+       float: right;  
+       cursor: pointer;
+       transition: all 0.7s ease-in-out;
+       &:hover{
+         transform: scale(0.8);
+       }    
+     }
+     .no-favorite{
+       background: url(../assets/svg/heard-no.svg) no-repeat center center;
+     }
+     .favorite{
+       background: url(../assets/svg/heard-yes.svg) no-repeat center center;
+     }
+   }
+ }
+
+ @media (max-width:1350px) {
+   .choose{
+     .choose-block, .sort-block{
+      margin: 0 auto;
+      margin-top: 20px;
+      width: 680px;
+      height: 260px;
+  }
+   }
+  
+}

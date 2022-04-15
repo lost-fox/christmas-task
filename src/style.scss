@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$background: #31a79d;
+$border: #063634;
+$hover-background: #73b3bb;
+$html-background: #0a3634;
+$color-text: #ffffff;
+$hover-border: #000000;
+
+html {
+  max-width: 1920px;
+  height: 100vh;
+  margin: 0 auto;
+  font-family: "Neucha", cursive;
+  background-color: $html-background;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.background {
+  padding-top: 300px;
+  background: no-repeat center center;
+  background-size: cover;
+}
+
+@import "components/mainScreen/mainScreen";
+@import "components/toysScreen/toysScreen";
+@import "components/treeScreen/treeScreen";

@@ -1,0 +1,67 @@
+
+.title {
+   margin: 0px auto;
+   width: 593px;
+   height: 249px;
+   border: 1px solid $border;
+   background-color: rgba($color: $background, $alpha: 0.4);
+   border-radius: 30px;
+   text-align: center;
+   h1 {
+     margin-top: 66px;
+     color: $color-text;
+     font-size: 53px;
+     line-height: 58px;
+     text-align: center;
+     text-transform: uppercase;
+   }
+ }
+ 
+ .start-game {
+   margin: 113px 0 255px 800px;
+   margin-left: calc(370px + (800 - 370) * ((100vw - 1024px) / (1920 - 1024)));
+   width: 320px;
+   border: 1px solid $border;
+   background-color: rgba($color: $background, $alpha: 0.4);
+   border-radius: 30px;
+   color: $color-text;
+   text-align: center;
+   font-size: 29px;
+   line-height: 54px;
+   cursor: pointer;
+   transition: all 0.7s ease-in-out;
+   &:hover {
+     border: 1px solid $hover-border;
+     background-color: rgba($color: $hover-background, $alpha: 0.4);
+     transform: translateX(50px);
+   }
+ }
+ 
+ .footer-main-screen {
+   margin: 40px;
+   justify-content: space-between;
+   color: $color-text;
+   font-size: 26px;
+   a {
+     color: $color-text;
+   }
+   .rss {
+     img {
+       height: 40px;
+     }
+   }
+   .github {
+     a {
+       transition: all 0.7s ease-in-out;
+       &:hover {
+         color: $hover-background;
+       }
+     }
+   }
+ }
+
+@media (max-width:1024px) {
+  .start-game{
+     margin-left: calc(230px + (370 - 230) * ((100vw - 768px) / (1024 - 768)));
+  }
+}
